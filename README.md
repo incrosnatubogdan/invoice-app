@@ -1,5 +1,7 @@
 ## Dashy Theme Angular Version
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/incrosnatubogdan/invoice-app.svg)](https://greenkeeper.io/)
+
 Thanks for purchasing the Dashy Theme Angular Version.
 
 Follow the documentation to install and get started with the development:
