@@ -1,0 +1,30 @@
+
+
+<div>
+    
+    <div class="tab-pane active" id="menu">
+        <div class="photo-container text-center">
+       
+            <div class="t-p">
+                <a href="">Admin</a>
+            </div>
+
+        </div>
+        <div class="section-heading">Menus</div>
+        <ul class="nav sidebar-nav">
+            <li ng-class="{active: $state.includes('home')}"><a ui-sref="home" ng-click="showSubNav(0)"><i class="fa fa-home"></i> <span class="menu-text"</span>Home</a>
+            </li>
+           
+             <li class=sidenav-dropdown ng-class="{'show-subnav': showingSubNav=='form'}" ng-mouseover=hoverCancel()> 
+ <a class=subnav-toggle href=javascript:; ng-click="showSubNav('form')"><i class="fa fa-file-text-o"></i>
+ <span class=menu-text>Invoice <i class="fa fa-angle-down fa-angle-down pull</span>-right"></i></span></a> 
+ <ul class="nav sidenav-sub-menu" collapse="showingSubNav!='form'"> <li ng-class="{active: $state.includes('elements')}">
+ 
+ <a ui-sref=components><i class="fa fa-keyboard-o"></i> Create Invoice</a></li> </ul> </li>
+            <li ng-class="{active: $state.includes('login')}"><a ui-sref="login" ng-click="showSubNav(0)"><i class="fa fa-sign-in"></i> <span class="menu-text">Log In </span></a>
+            </li>
+            <li ng-class="{active: $state.includes('signup')}"><a ui-sref="signup" ng-click="showSubNav(0)"><i class="fa fa-user-plus"></i> <span class="menu-text">Sign Up </span></a>
+            </li>
+        </ul>
+    </div>
+</div>

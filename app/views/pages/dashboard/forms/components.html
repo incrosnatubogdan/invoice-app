@@ -1,0 +1,168 @@
+<pageheader pagename="Create Invoice" ></pageheader>
+
+<div class="conter-wrapper">				
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Create Invoice		  
+						<div class="panel-control pull-right">
+							<a class="panelButton"><i class="fa fa-refresh"></i></a>
+							<a class="panelButton"><i class="fa fa-minus"></i></a>
+							<a class="panelButton"><i class="fa fa-remove"></i></a>
+						</div>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-2 control-label">Client Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputemail3">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-2 control-label">Invoice Number</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputemail3">
+							</div>
+						</div>
+						
+						
+						<label class="col-sm-2 control-label">Invoice Date</label>
+						<div class="col-sm-10" ng-controller="DatepickerDemoCtrl">
+							<p class="input-group">
+					            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+					            <span class="input-group-btn">
+					            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+					            </span>
+				            </p>
+						</div>
+						<hr>
+						
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-2 control-label">Category</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputemail3">
+							</div>
+						</div>
+						<hr>
+						
+						
+
+						
+							
+						 <table id="myTable" class="table">
+      <tr>
+        <th> Quantity </th>
+        <th> Item Number </th>
+        <th> Description </th>
+        <th> Price </th>
+        <th> Total </th>
+      </tr>
+
+      <tr class="unit-table">
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr class="unit-table">
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr class="unit-table">
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+</form>
+
+<script>
+function addRow(){
+        var table = document.getElementById("myTable");
+        var rows = document.getElementById("myTable").rows.length;
+
+
+
+
+        var table = document.getElementById("myTable");
+        var rows = document.getElementById("myTable").rows.length;
+        // add row 
+            var row = table.insertRow(rows);
+
+        // add input in cell 
+        for(var i = 0; i < 5; i++){
+          var cell1 = row.insertCell(i);
+          var inputItem = document.createElement('input');
+          cell1.appendChild(inputItem);
+        }  
+
+        }
+
+
+
+document.getElementById('add_btn').onclick=addRow;
+</script>
+  <button id="add_btn">Add new row</button>
+							
+						<hr>
+						<hr>
+						<hr>
+						<div class="col-sm-12">
+						<button type="button" class="btn btn-primary btn-rounded">Submit</button>
+							</div>
+						</div>
+						
+						<hr>
+						
+						
+					
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
